@@ -1,0 +1,41 @@
+<template>
+  <section class="slider-area">
+    <div class="slider-active">
+      <div class="single-slider slider-bg d-flex align-items-center">
+        <div class="slider-overlay-bg"></div>
+        <div class="slider-bg-shape"></div>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-11">
+              <div class="slider-content text-center">
+                <h2 data-animation="fadeInUpS" data-delay=".3s">
+                  Delivery Express
+                </h2>
+                <p data-animation="fadeInUpS" data-delay=".6s">
+                  Explore ways to become more efficient, see printing offers and
+                  solutions insights and inspiration for your small business.
+                </p>
+                <div
+                  class="slider-form"
+                  data-animation="fadeInUpS"
+                  data-delay=".9s"
+                >
+                  <form action="#">
+                    <input type="text" placeholder="Tracking id" />
+                    <button class="btn">Tracking</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  name: 'TrackingHeader',
+};
+</script>
