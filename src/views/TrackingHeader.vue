@@ -21,8 +21,12 @@
                   data-delay=".9s"
                 >
                   <form action="#">
-                    <input type="text" placeholder="Tracking id" />
-                    <button class="btn">Tracking</button>
+                    <input
+                      type="text"
+                      placeholder="Tracking id"
+                      v-model="trackingId"
+                    />
+                    <button class="btn" @click="trackShipment">Tracking</button>
                   </form>
                 </div>
               </div>
@@ -37,5 +41,15 @@
 <script>
 export default {
   name: 'TrackingHeader',
+  data() {
+    return {
+      trackingId: '',
+    };
+  },
+  methods: {
+    trackShipment() {
+      console.log(this.trackingId);
+    },
+  },
 };
 </script>

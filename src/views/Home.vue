@@ -12,7 +12,7 @@
           <div class="row">
             <div class="col-12">
               <div class="about-active">
-                <div class="single-about-wrap">
+                <!-- <div class="single-about-wrap">
                   <div class="row align-items-center">
                     <div class="col-lg-6">
                       <div class="about-img">
@@ -35,7 +35,7 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <div class="single-about-wrap">
                   <div class="row align-items-center">
                     <div class="col-lg-6">
@@ -66,88 +66,7 @@
         </div>
       </section>
 
-      <section class="services-area pt-115 pb-90">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-8 col-lg-10">
-              <div class="section-title text-center mb-60">
-                <h6>Delivery innovative service</h6>
-                <h2>About Cargo Delivery</h2>
-                <p>
-                  Express delivery is an innovative service is effective
-                  logistics solution for the delivery of small cargo. This
-                  service is useful for companies of various effective logistics
-                  scale.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="services-wrapper">
-            <div class="row">
-              <div class="col-lg-4 col-md-6">
-                <div class="single-services mb-30">
-                  <div class="services-thumb">
-                    <a href="#"
-                      ><img src="../assets/img/services_img01.jpg" alt="img"
-                    /></a>
-                  </div>
-                  <div class="services-content">
-                    <div class="services-icon">
-                      <i class="flaticon-shipping-and-delivery"></i>
-                    </div>
-                    <h3><a href="#">More Control, for Free</a></h3>
-                    <span>Delivery Service</span>
-                    <p>
-                      Express delivery is an innovativ service is effective
-                      logistics solutio for delivery of small cargo service.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="single-services mb-30">
-                  <div class="services-thumb">
-                    <a href="#"
-                      ><img src="../assets/img/services_img02.jpg" alt="img"
-                    /></a>
-                  </div>
-                  <div class="services-content">
-                    <div class="services-icon">
-                      <i class="flaticon-shipping"></i>
-                    </div>
-                    <h3><a href="#">Expand with E-Commerce</a></h3>
-                    <span>Delivery Service</span>
-                    <p>
-                      Express delivery is an innovativ service is effective
-                      logistics solutio for delivery of small cargo service.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="single-services mb-30">
-                  <div class="services-thumb">
-                    <a href="#"
-                      ><img src="../assets/img/services_img03.jpg" alt="img"
-                    /></a>
-                  </div>
-                  <div class="services-content">
-                    <div class="services-icon">
-                      <i class="flaticon-location"></i>
-                    </div>
-                    <h3><a href="#">More Than Anywhere Shipping</a></h3>
-                    <span>Delivery Service</span>
-                    <p>
-                      Express delivery is an innovativ service is effective
-                      logistics solutio for delivery of small cargo service.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Services />
 
       <section class="area-wrapper black-bg position-relative pt-115 pb-120">
         <div class="area-wrap-bg"></div>
@@ -601,122 +520,7 @@
       </section>
     </main>
 
-    <footer>
-      <div
-        class="footer-wrap pt-190 pb-40"
-        data-background="../assets/img/footer_bg.jpg"
-      >
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <div class="footer-widget mb-50">
-                <div class="footer-logo mb-35">
-                  <!-- <a href="index.html"
-                    ><img src="../assets/img/w_logo.png" alt="img"
-                  /></a> -->
-                </div>
-                <div class="footer-text">
-                  <p>
-                    Orem Ipsum is simply dumm text the printing and types indstr
-                    sum has been the industry
-                  </p>
-                </div>
-                <div class="footer-social">
-                  <ul>
-                    <li>
-                      <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-twitter"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                    </li>
-                    <li>
-                      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <div class="footer-widget mb-50">
-                <div class="fw-title mb-30">
-                  <h5>USEFUL LINKS</h5>
-                </div>
-                <div class="fw-link">
-                  <ul>
-                    <li>
-                      <a href="#"
-                        ><i class="fas fa-caret-right"></i> About us</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fas fa-caret-right"></i> Delivery
-                        Information</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fas fa-caret-right"></i> Terms &
-                        Conditions</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fas fa-caret-right"></i> Privacy Policy</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><i class="fas fa-caret-right"></i> Refund Policy</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-3 col-lg-4 col-md-6">
-              <div class="footer-widget mb-50">
-                <div class="fw-title mb-30">
-                  <h5>Support & Downloads</h5>
-                </div>
-                <div class="f-support-content">
-                  <p>
-                    Lorem ipsum dolor sit amet, consy eetur adipisc de elit.
-                    Quisque act raqum nunc no dolor
-                  </p>
-                  <a href="#" class="f-download-btn"
-                    ><img src="../assets/img/f_download_btn01.png" alt="img"
-                  /></a>
-                  <a href="#" class="f-download-btn"
-                    ><img src="../assets/img/f_download_btn02.png" alt="img"
-                  /></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="copyright-wrap">
-        <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6 col-md-7">
-              <div class="copyright-text">
-                <p>Copyright© <span>StarTask </span> | All Rights Reserved</p>
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-5">
-              <div class="f-payment-method text-center text-md-right">
-                <img src="../assets/img/card_img.png" alt="img" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <Footer />
   </div>
 </template>
 
@@ -724,6 +528,8 @@
 import Header from './Header.vue';
 import TrackingHeader from './TrackingHeader.vue';
 import HeaderServices from './HeaderServices.vue';
+import Services from './Services.vue';
+import Footer from './Footer.vue';
 
 export default {
   name: 'Home',
@@ -731,6 +537,8 @@ export default {
     Header,
     TrackingHeader,
     HeaderServices,
+    Services,
+    Footer,
   },
 };
 </script>
