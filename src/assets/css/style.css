@@ -215,7 +215,7 @@ label {
   letter-spacing: .5px;
   line-height: 1;
   margin-bottom: 0;
-  padding: 12px 20px !important;
+  padding: 12px 20px;
   text-align: center;
   text-transform: uppercase;
   touch-action: manipulation;
@@ -1280,42 +1280,6 @@ label {
 }
 
 /* 5. Breadcrumb  */
-.breadcrumb-bg {
-  /* background-image: url(../img/breadcrumb_bg.jpg); */
-  min-height: 726px;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  display: flex;
-  align-items: center;
-  z-index: 1;
-  text-align: center;
-}
-
-.breadcrumb-bg::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/breadcrumb_overlay_dots.png);
-  background-size: cover;
-  background-position: center;
-  opacity: .03;
-}
-
-.breadcrumb-bg::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: #071d39;
-  opacity: .31;
-  z-index: -1;
-}
 
 .breadcrumb {
   display: inline-block;
@@ -1377,48 +1341,44 @@ label {
   border-width: 0 0 50px 25px;
   border-color: transparent transparent #e32222 transparent;
 }
-
-.breadcrumb::after {
-  content: "";
-  position: absolute;
-  right: -25px;
-  top: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 50px 25px 0 0;
-  border-color: #e32222 transparent transparent transparent;
+.infooo {
+  font-style: italic;
+  font-weight: bold;
+  color: rgb(187, 5, 5);
 }
-
+.status_date {
+  background-color: rgb(211, 211, 211);
+  height: 22px;
+  padding: 3px;
+   width: max-content;
+  text-align: center;
+  border-radius: 2px;
+  font-weight: bold;
+}
+.status_dep {
+  color: green;
+  margin-top: 5px;
+  display: block;
+}
+.status_held {
+  color: rgb(136, 6, 6);
+  margin-top: 5px;
+  display: block;
+}
+.status_transit {
+  color: rgb(233, 138, 15);
+  margin-top: 5px;
+  display: block;
+}
 .breadcrumb-content h2 {
-  font-size: 70px;
+  font-size: 30px;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 700;
+  margin-top: 10px;
   color: #fff;
   margin-bottom: 0;
   position: relative;
   display: inline-block;
-}
-
-.breadcrumb-content h2::before,
-.breadcrumb-content h2::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 15px;
-  height: 2px;
-  width: 100%;
-  border-radius: 50%;
-  background-color: rgb(255, 70, 18, 0.288);
-}
-
-.breadcrumb-content h2::after {
-  top: auto;
-  bottom: 15px;
-}
-
-.breadcrumb-content {
-  padding-top: 220px;
 }
 
 
@@ -4230,10 +4190,8 @@ label {
 /* 20. Support */
 .s-breadcrumb-bg {
   background-image: url(../img/breadcrumb_bg02.jpg);
-}
-
-.t-breadcrumb-bg {
-  /* background-image: url(../img/breadcrumb_bg03.jpg); */
+   background-repeat: no-repeat;
+   background-size: 100% 100px;
 }
 
 .support-bg {

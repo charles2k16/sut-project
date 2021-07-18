@@ -3,7 +3,7 @@
     <Header />
 
     <main>
-      <TrackingHeader />
+      <TrackingHead />
 
       <HeaderServices />
 
@@ -526,7 +526,7 @@
 
 <script>
 import Header from './Header.vue';
-import TrackingHeader from './TrackingHeader.vue';
+import TrackingHead from './TrackingHead.vue';
 import HeaderServices from './HeaderServices.vue';
 import Services from './Services.vue';
 import Footer from './Footer.vue';
@@ -535,7 +535,7 @@ export default {
   name: 'Home',
   components: {
     Header,
-    TrackingHeader,
+    TrackingHead,
     HeaderServices,
     Services,
     Footer,
