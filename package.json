@@ -1,5 +1,5 @@
 {
-  "name": "everblue_web",
+  "name": "sut_web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,11 +9,12 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.9.2",
+    "autoprefixer": "^9.8.6",
     "axios": "^0.21.1",
-    "bootstrap": "^5.0.2",
     "core-js": "^3.6.5",
-    "jquery": "^3.6.0",
-    "popper.js": "^1.16.1",
+    "element-ui": "^2.15.5",
+    "postcss": "^7.0.36",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.7",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },

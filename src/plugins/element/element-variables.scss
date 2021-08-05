@@ -1,0 +1,34 @@
+/*
+Write your variables here. All available variables can be
+found in element-ui/packages/theme-chalk/src/common/var.scss.
+For example, to overwrite the theme color:
+*/
+
+$--color-primary: #2D89DF;
+$--color-success: #39c477;
+$--color-warning: #f7ba2a;
+$--color-danger: #ff4949;
+$--color-info: rgb(126, 126, 123);
+
+/* icon font path, required */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import '~element-ui/packages/theme-chalk/src/index';
+
+.el-button--text {
+  color: rgb(184, 181, 181);
+}
+
+.el-main {
+  background: #e6e6e6;
+}
+
+.el-header {
+  background: #e6e6e6;
+  font-size: 12px;
+  height: 45px !important;
+  border-bottom: 1px solid rgb(199, 198, 198);
+  line-height: 40px;
+  display: flex;
+  justify-content: space-between;
+}
