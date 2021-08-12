@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="full_width d-flex-justify-between">
-      <div class="header_donate">
+      <div class="header_donate animate__animated animate__backInLeft">
         <div>
           <a href="/"
             ><img
@@ -39,15 +39,6 @@
         </div>
 
         <div>
-          <a href="https://ges.gov.gh/" target="_blank"
-            ><img
-              src="../assets/images/logos/ges_logo.webp"
-              class="header_image_ges mt--15"
-              alt="ges"
-          /></a>
-        </div>
-
-        <div>
           <a href="https://energymin.gov.gh/" target="_blank"
             ><img
               src="../assets/images/logos/energy.webp"
@@ -55,20 +46,30 @@
               alt="eog"
           /></a>
         </div>
+        <div>
+          <a href="https://ges.gov.gh/" target="_blank"
+            ><img
+              src="../assets/images/logos/ges_logo.webp"
+              class="header_image_ges mt--15"
+              alt="ges"
+          /></a>
+        </div>
       </div>
       <div class="d-flex-align-center">
-        <el-button type="primary" class="donate_btn">Donate</el-button>
+        <a class="donate_btn">Donate</a>
       </div>
     </div>
 
-    <div class="nav_bar">
+    <div class="nav_bar" id="navbar">
       <div class="d-flex-center-between page_margin">
-        <ul class="home_links">
+        <ul class="home_links hidden-sm-and-down">
           <li>Home</li>
           <li>About Project</li>
           <li>About Partner</li>
           <li>Contact us</li>
         </ul>
+
+        <span class="material-icons hidden-md-and-up menu_icon"> menu </span>
 
         <div class="w-20">
           <el-input
@@ -101,6 +102,7 @@ export default {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  width: 70%;
 
   img {
     margin-right: 20px;
@@ -109,31 +111,46 @@ export default {
     height: 90px;
   }
   img.header_image_rel {
-    height: 90px;
+    width: 100%;
+    height: auto;
   }
   img.header_image_val {
-    height: 110px;
+    width: 100%;
+    height: auto;
   }
   img.header_image_moe {
-    height: 120px;
+    width: 100%;
+    height: auto;
+  }
+  img.header_image_ern {
+    width: 100%;
+    height: auto;
   }
   img.header_image_ges {
     height: 150px;
   }
-  img.header_image_ern {
-    height: 130px;
-  }
 }
 .donate_btn {
+  font-weight: bold;
+  font-style: normal;
   font-size: 20px;
   margin-right: 28px;
   height: 55px;
   width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background-color: #2d89df;
+  border-color: #2d89df;
+  border-radius: 5px;
 }
 .nav_bar {
   background: #2d89df;
   height: 55px;
   padding: 2px 0px 10px 6px;
+  width: 100%;
+  z-index: 1000;
 
   .home_links {
     list-style: none;
@@ -144,7 +161,11 @@ export default {
       float: left;
       color: rgb(238, 230, 230);
       margin-right: 20px;
-      font-size: 18px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    li:hover {
+      color: rgb(172, 172, 206);
     }
   }
 }

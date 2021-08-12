@@ -22,13 +22,17 @@ $--font-path: '~element-ui/lib/theme-chalk/fonts';
 .el-main {
   background: #e6e6e6;
 }
-
-.el-header {
-  background: #e6e6e6;
-  font-size: 12px;
+.el-submenu__title {
   height: 45px !important;
-  border-bottom: 1px solid rgb(199, 198, 198);
-  line-height: 40px;
-  display: flex;
-  justify-content: space-between;
+  line-height: 45px !important;
+  font-size: 16px !important;
+}
+
+.el-submenu .el-menu-item {
+  height: 40px !important;
+  line-height: 40px !important;
+}
+
+.el-menu-item {
+  font-size: 16px !important;
 }
