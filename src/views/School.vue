@@ -2,7 +2,17 @@
   <div>
     <MainHeader />
     <div class="page_header py-40">
-      <h1 class="text-center head_txt color_white caps">{{ school.name }}</h1>
+      <h1
+        class="
+          text-center
+          head_txt
+          color_white
+          caps
+          animate__animated animate__fadeInDown
+        "
+      >
+        {{ school.name }}
+      </h1>
     </div>
 
     <br />
@@ -11,19 +21,19 @@
         <el-col :xs="24" :sm="24" :md="10" :lg="10" :xl="10">
           <div class="school_details">
             <div class="sch_info">
-              <div class="sch_details_head">
+              <div class="_details_head">
                 <h2 class="head_txt">School Details</h2>
               </div>
-              <div class="mt-15">
+              <div class="mt-15 animate__animated animate__fadeInLeft">
                 <span class="sch_label">Name of School: </span>
                 <span>{{ school.name }}</span>
               </div>
-              <div class="mt-15">
+              <div class="mt-15 animate__animated animate__fadeInLeft">
                 <span class="sch_label">District Location: </span>
                 <span>{{ school.district.name }}</span>
               </div>
 
-              <div class="mt-15">
+              <div class="mt-15 animate__animated animate__fadeInLeft">
                 <span class="sch_label">Region Location: </span>
                 <span>{{ school.district.region.name }}</span>
               </div>
@@ -31,7 +41,7 @@
           </div>
         </el-col>
         <el-col :xs="24" :sm="24" :md="12" :lg="12" :xl="12">
-          <div class="sch_details_head">
+          <div class="_details_head">
             <h2 class="head_txt">Map Location Address</h2>
           </div>
           <iframe
@@ -45,7 +55,7 @@
         </el-col>
       </el-row>
       <br /><br />
-      <div class="sch_details_head">
+      <div class="_details_head">
         <h2 class="head_txt">Project Status</h2>
       </div>
       <el-row type="flex" class="row-bg" justify="center">
@@ -53,18 +63,17 @@
           <div class="mt-15">
             <el-tabs type="card" stretch>
               <el-tab-pane label="Before Project">
-                <div>
+                <div class="bg-grey">
                   <el-carousel
                     :interval="4000"
                     type="card"
-                    height="300px"
                     v-if="beforeProjectImages.length > 0"
                   >
                     <el-carousel-item
                       v-for="image in beforeProjectImages"
                       :key="image.id"
                     >
-                      <img :src="image.image_url" alt="image" height="300px" />
+                      <img :src="image.image_url" alt="image" />
                     </el-carousel-item>
                   </el-carousel>
 
@@ -72,18 +81,17 @@
                 </div>
               </el-tab-pane>
               <el-tab-pane label="During Project">
-                <div>
+                <div class="bg-grey">
                   <el-carousel
                     :interval="4000"
                     type="card"
-                    height="300px"
                     v-if="duringProjectImages.length > 0"
                   >
                     <el-carousel-item
                       v-for="image in duringProjectImages"
                       :key="image.id"
                     >
-                      <img :src="image.image_url" alt="image" height="300px" />
+                      <img :src="image.image_url" alt="image" />
                     </el-carousel-item>
                   </el-carousel>
 
@@ -91,7 +99,7 @@
                 </div>
               </el-tab-pane>
               <el-tab-pane label="After Project">
-                <div>
+                <div class="bg-grey">
                   <el-carousel
                     :interval="4000"
                     type="card"
@@ -102,7 +110,7 @@
                       v-for="image in afterProjectImages"
                       :key="image.id"
                     >
-                      <img :src="image.image_url" alt="image" height="300px" />
+                      <img :src="image.image_url" alt="image" />
                     </el-carousel-item>
                   </el-carousel>
 
@@ -181,7 +189,7 @@ export default {
   .sch_info {
     background-color: #f9fafb;
     width: 450px;
-    height: 510px;
+    height: 505px;
   }
 
   .sch_label {
@@ -192,14 +200,5 @@ export default {
   span {
     font-size: 22px;
   }
-}
-.sch_details_head {
-  background: #2c89df;
-  color: white;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  padding: 12px 2px;
-  display: flex;
-  justify-content: center;
 }
 </style>

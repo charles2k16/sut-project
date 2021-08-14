@@ -5,7 +5,7 @@
         <div class="footer_height d-flex-column-center">
           <h3>Let's Get Connected</h3>
 
-          <div class="d-flex-center-between">
+          <div class="d-flex-center-between mt-10">
             <a
               href="https://www.instagram.com/realestatetimesafrica"
               target="_blank"
@@ -102,6 +102,7 @@
             d-flex-algn-center
             animate__animated animate__fadeInUp
             text-center
+            mt-10
           "
         >
           <h3>
@@ -118,6 +119,7 @@
             footer_height
             d-flex-algn-center
             animate__animated animate__slideInRight
+            mt-10
           "
         >
           <h3>Designed by <strong> True Apex LTD</strong>.</h3>
@@ -130,7 +132,6 @@
 <style lang="scss" scoped>
 .footer_height {
   // height: 108px;
-
   h3 {
     color: #6b7280;
 

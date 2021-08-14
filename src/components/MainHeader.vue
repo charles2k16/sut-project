@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="full_width d-flex-justify-between">
+    <div class="full_width d-flex-justify-between bg-white">
       <div class="header_donate animate__animated animate__backInLeft">
         <div>
           <img
@@ -56,17 +56,38 @@
         </div>
       </div>
       <div class="d-flex-align-center">
-        <a class="donate_btn">Donate</a>
+        <a
+          class="donate_btn"
+          href="https://dashboard.flutterwave.com/donate/5yatezupvysx"
+          target="_blank"
+          >Donate</a
+        >
       </div>
     </div>
 
     <div class="nav_bar" id="navbar">
       <div class="d-flex-center-between page_margin">
         <ul class="home_links hidden-sm-and-down">
-          <li @click="$router.push('/')">Home</li>
-          <li>About Project</li>
-          <li>About Partner</li>
-          <li>Contact us</li>
+          <li @click="$router.push('/')">
+            <router-link to="/" exact-active-class="active-link"
+              >Home</router-link
+            >
+          </li>
+          <li>
+            <router-link to="/about" exact-active-class="active-link"
+              >About Project</router-link
+            >
+          </li>
+          <li>
+            <router-link to="/partner" exact-active-class="active-link"
+              >About Partner</router-link
+            >
+          </li>
+          <li>
+            <router-link to="/contact" exact-active-class="active-link"
+              >Contact us</router-link
+            >
+          </li>
         </ul>
 
         <span class="material-icons hidden-md-and-up color_white"> menu </span>
