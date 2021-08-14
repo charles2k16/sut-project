@@ -3,12 +3,12 @@
     <div class="full_width d-flex-justify-between">
       <div class="header_donate animate__animated animate__backInLeft">
         <div>
-          <a href="/"
-            ><img
-              src="../assets/images/logos/logo_ret.webp"
-              class="header_image_ret"
-              alt="RET LOGO"
-          /></a>
+          <img
+            src="../assets/images/logos/logo_ret.webp"
+            class="header_image_ret"
+            alt="RET LOGO"
+            @click="$router.push('/')"
+          />
         </div>
 
         <div>
@@ -63,13 +63,13 @@
     <div class="nav_bar" id="navbar">
       <div class="d-flex-center-between page_margin">
         <ul class="home_links hidden-sm-and-down">
-          <li>Home</li>
+          <li @click="$router.push('/')">Home</li>
           <li>About Project</li>
           <li>About Partner</li>
           <li>Contact us</li>
         </ul>
 
-        <span class="material-icons hidden-md-and-up menu_icon"> menu </span>
+        <span class="material-icons hidden-md-and-up color_white"> menu </span>
 
         <div class="w-20">
           <el-input

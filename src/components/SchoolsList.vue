@@ -3,21 +3,23 @@
     <el-menu
       default-active="1"
       class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose"
       v-loading="loading"
     >
       <el-submenu
-        v-for="(schools, index) in schoolRegions"
+        v-for="(school, index) in schoolRegions"
         :key="index"
-        :index="index + 1"
+        :index="toString(index++)"
       >
         <template slot="title">
-          <!-- <i class="el-icon-location"></i> -->
-          <span>{{ schools.district.region.name }}</span>
+          <span>{{ school.district.region.name }}</span>
         </template>
         <el-menu-item-group title="District">
-          <el-menu-item>{{ schools.district.name }}</el-menu-item>
+          <el-submenu>
+            <template slot="title">{{ school.district.name }}</template>
+            <el-menu-item @click="setLocalStorage(school)">{{
+              school.name
+            }}</el-menu-item>
+          </el-submenu>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>
@@ -48,11 +50,12 @@ export default {
         })
         .catch(error => console.log(error));
     },
-    handleOpen(key, keyPath) {
-      console.log(key, keyPath);
+    setLocalStorage(school) {
+      localStorage.setItem('selectedSchool', JSON.stringify(school));
+      this.$router.replace({ name: 'School', params: { name: school.name } });
     },
-    handleClose(key, keyPath) {
-      console.log(key, keyPath);
+    toString(num) {
+      return num.toString();
     },
   },
 };
