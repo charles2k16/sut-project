@@ -46,81 +46,35 @@
         </el-button>
       </div>
     </div>
-    <div class="blog">
-      <div>
-        <img
-          src="../assets/images/ret_about.webp"
-          alt="alt"
-          class="blog_image"
-        />
-      </div>
-      <div class="p-10">
-        <h3>‘Schools Under Trees’ Website Launched in Accra</h3>
-        <p class="mt-15">
-          Valco Trust Fund in partnership with the Ministry of Energy and Ghana
-          Education Service...
-        </p>
-        <br />
-        <el-button
-          type="primary"
-          size="small"
-          class="animate__animated animate__backInLeft mt-15"
-          >Read more
-        </el-button>
-      </div>
-    </div>
-    <div class="blog">
-      <div>
-        <img
-          src="../assets/images/ret_about.webp"
-          alt="alt"
-          class="blog_image"
-        />
-      </div>
-      <div class="p-10">
-        <h3>‘Schools Under Trees’ Website Launched in Accra</h3>
-        <p class="mt-15">
-          Valco Trust Fund in partnership with the Ministry of Energy and Ghana
-          Education Service...
-        </p>
-        <br />
-        <el-button
-          type="primary"
-          size="small"
-          class="animate__animated animate__backInLeft mt-15"
-          >Read more
-        </el-button>
-      </div>
-    </div>
-    <div class="blog">
-      <div>
-        <img
-          src="../assets/images/ret_about.webp"
-          alt="alt"
-          class="blog_image"
-        />
-      </div>
-      <div class="p-10">
-        <h3>‘Schools Under Trees’ Website Launched in Accra</h3>
-        <p class="mt-15">
-          Valco Trust Fund in partnership with the Ministry of Energy and Ghana
-          Education Service...
-        </p>
-        <br />
-        <el-button
-          type="primary"
-          size="small"
-          class="animate__animated animate__backInLeft mt-15"
-          >Read more
-        </el-button>
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
+import blogApi from '@/api/blog';
+
 export default {
   name: 'BlogLists',
+  data() {
+    return {
+      stories: [],
+    };
+  },
+  created() {
+    this.getBlogStories();
+  },
+  methods: {
+    getBlogStories() {
+      blogApi
+        .getBlogPosts()
+        .then(response => {
+          const allStories = response.stories;
+          let firstFiveStories = allStories.slice(0, 5);
+          this.stories = firstFiveStories;
+          console.log('new', this.stories);
+        })
+        .catch(error => console.log(error));
+    },
+  },
 };
 </script>
 
