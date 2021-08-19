@@ -16,4 +16,11 @@ export default {
       .then((response) => Promise.resolve(response.data))
       .catch((error) => Promise.reject(error))
   },
+
+  sendEmail (emailForm) {
+    let url = "https://schools-under-trees-op4he.ondigitalocean.app/send-email/"
+    return axios.post(url, emailForm)
+      .then((response) => Promise.resolve(response))
+      .catch((error) => Promise.reject(error))
+  }
 }

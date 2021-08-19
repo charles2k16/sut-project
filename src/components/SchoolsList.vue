@@ -4,15 +4,11 @@
       <template slot="template">
         <div style="padding: 14px">
           <el-skeleton-item variant="h3" style="width: 50%" />
-          <div
-            style="
-              display: flex;
-              align-items: center;
-              justify-items: space-between;
-              margin-top: 16px;
-              height: 16px;
-            "
-          >
+          <div class="school_skeleton">
+            <el-skeleton-item variant="text" style="margin-right: 16px" />
+            <el-skeleton-item variant="text" style="width: 30%" />
+          </div>
+          <div class="school_skeleton">
             <el-skeleton-item variant="text" style="margin-right: 16px" />
             <el-skeleton-item variant="text" style="width: 30%" />
           </div>
@@ -31,9 +27,9 @@
             <el-menu-item-group title="District">
               <el-submenu>
                 <template slot="title">{{ school.district.name }}</template>
-                <el-menu-item @click="setLocalStorage(school)">{{
-                  school.name
-                }}</el-menu-item>
+                <el-menu-item @click="setLocalStorage(school)">
+                  » {{ school.name }}</el-menu-item
+                >
               </el-submenu>
             </el-menu-item-group>
           </el-submenu>

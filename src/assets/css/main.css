@@ -90,6 +90,9 @@ a {
 .mt-25 {
   margin-top: 25px;
 }
+.mt-20 {
+  margin-top: 20px;
+}
 .mt-10 {
   margin-top: 10px;
 }
@@ -224,4 +227,15 @@ footer {
   padding: 12px 2px;
   display: flex;
   justify-content: center;
+  text-align: center;
+}
+.el-form-item__label {
+  line-height: 20px !important;
+}
+.school_skeleton {
+   display: flex;
+   align-items: center;
+   justify-items: space-between;
+   margin-top: 16px;
+   height: 16px;
 }

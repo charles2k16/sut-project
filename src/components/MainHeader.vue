@@ -89,8 +89,31 @@
             >
           </li>
         </ul>
-
-        <span class="material-icons hidden-md-and-up color_white"> menu </span>
+        <el-dropdown class="hidden-md-and-up">
+          <span class="material-icons color_white"> menu </span>
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item>
+              <router-link to="/" exact-active-class="active-link"
+                >Home</router-link
+              ></el-dropdown-item
+            >
+            <el-dropdown-item>
+              <router-link to="/about" exact-active-class="active-link"
+                >About Project</router-link
+              >
+            </el-dropdown-item>
+            <el-dropdown-item
+              ><router-link to="/partner" exact-active-class="active-link"
+                >About Partner</router-link
+              ></el-dropdown-item
+            >
+            <el-dropdown-item>
+              <router-link to="/contact" exact-active-class="active-link"
+                >Contact us</router-link
+              ></el-dropdown-item
+            >
+          </el-dropdown-menu>
+        </el-dropdown>
 
         <div class="w-20">
           <el-input

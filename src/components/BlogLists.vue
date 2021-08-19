@@ -1,47 +1,26 @@
 <template>
-  <div class="blog_container">
-    <div class="blog">
+  <div class="blog_container" v-loading="blogLoading">
+    <div
+      v-for="(blog, index) in stories"
+      :key="index"
+      :class="index % 2 == 0 ? 'blog' : 'blog blog_content'"
+    >
       <div>
-        <img
-          src="../assets/images/ret_about.webp"
-          alt="alt"
-          class="blog_image"
-        />
+        <img :src="blog.content.image.url" alt="alt" class="blog_image" />
       </div>
       <div class="p-10">
-        <h3>‘Schools Under Trees’ Website Launched in Accra</h3>
+        <h3>{{ blog.content.title }}</h3>
         <p class="mt-15">
-          Valco Trust Fund in partnership with the Ministry of Energy and Ghana
-          Education Service...
+          {{ blog.content.summary }}
         </p>
         <br />
+      </div>
+      <div class="p-10">
         <el-button
           type="primary"
           size="small"
           class="animate__animated animate__backInLeft mt-15"
-          >Read more
-        </el-button>
-      </div>
-    </div>
-    <div class="blog blog_content">
-      <div>
-        <img
-          src="../assets/images/ret_about.webp"
-          alt="alt"
-          class="blog_image"
-        />
-      </div>
-      <div class="p-10">
-        <h3>‘Schools Under Trees’ Website Launched in Accra</h3>
-        <p class="mt-15">
-          Valco Trust Fund in partnership with the Ministry of Energy and Ghana
-          Education Service...
-        </p>
-        <br />
-        <el-button
-          type="primary"
-          size="small"
-          class="animate__animated animate__backInLeft mt-15"
+          @click="selectedBlog(blog.content)"
           >Read more
         </el-button>
       </div>
@@ -56,6 +35,7 @@ export default {
   name: 'BlogLists',
   data() {
     return {
+      blogLoading: true,
       stories: [],
     };
   },
@@ -70,9 +50,17 @@ export default {
           const allStories = response.stories;
           let firstFiveStories = allStories.slice(0, 5);
           this.stories = firstFiveStories;
-          console.log('new', this.stories);
+          this.blogLoading = false;
         })
         .catch(error => console.log(error));
+    },
+    selectedBlog(blog) {
+      sessionStorage.setItem('blog', JSON.stringify(blog));
+      let routeData = this.$router.resolve({
+        name: 'Blog',
+        params: { title: blog.title },
+      });
+      window.open(routeData.href, '_blank');
     },
   },
 };
@@ -102,6 +90,9 @@ export default {
     box-shadow: 0 8px 6px -4px rgb(168, 167, 167);
     border: 1px solid rgb(250, 250, 250);
     padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     h3 {
       color: #2c89df;

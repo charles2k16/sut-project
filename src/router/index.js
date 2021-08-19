@@ -5,6 +5,7 @@ import School from "@/views/School.vue";
 import About from "@/views/About.vue";
 import Partner from "@/views/Partner.vue";
 import Contact from "@/views/Contact.vue";
+import SingleBlog from "@/views/SingleBlog"
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,11 @@ const routes = [
     path: "/schools/:name",
     name: "School",
     component: School,
+  },
+  {
+    path: "/blog/:title",
+    name: "Blog",
+    component: SingleBlog,
   },
 ];
 
