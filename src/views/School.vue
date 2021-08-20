@@ -68,12 +68,17 @@
                     :interval="4000"
                     type="card"
                     v-if="beforeProjectImages.length > 0"
+                    class="school_slide"
                   >
                     <el-carousel-item
                       v-for="image in beforeProjectImages"
                       :key="image.id"
                     >
-                      <img :src="image.image_url" alt="image" />
+                      <img
+                        :src="image.image_url"
+                        alt="image"
+                        style="width: 100%"
+                      />
                     </el-carousel-item>
                   </el-carousel>
 
@@ -86,12 +91,17 @@
                     :interval="4000"
                     type="card"
                     v-if="duringProjectImages.length > 0"
+                    class="school_slide"
                   >
                     <el-carousel-item
                       v-for="image in duringProjectImages"
                       :key="image.id"
                     >
-                      <img :src="image.image_url" alt="image" />
+                      <img
+                        :src="image.image_url"
+                        alt="image"
+                        style="width: 100%"
+                      />
                     </el-carousel-item>
                   </el-carousel>
 
@@ -103,14 +113,18 @@
                   <el-carousel
                     :interval="4000"
                     type="card"
-                    height="300px"
+                    class="school_slide"
                     v-if="afterProjectImages.length > 0"
                   >
                     <el-carousel-item
                       v-for="image in afterProjectImages"
                       :key="image.id"
                     >
-                      <img :src="image.image_url" alt="image" />
+                      <img
+                        :src="image.image_url"
+                        alt="image"
+                        style="width: 100%"
+                      />
                     </el-carousel-item>
                   </el-carousel>
 
@@ -198,7 +212,7 @@ export default {
     margin-left: 10px;
   }
   span {
-    font-size: 22px;
+    font-size: 21px;
   }
 }
 </style>

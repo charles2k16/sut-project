@@ -428,6 +428,9 @@
    .home_slide .el-carousel__container {
      height: 250px !important;
    }
+     .school_slide .el-carousel__container {
+       height: 230px !important;
+     }
 
    .project_content {
      padding: 15px 10px 5px 10px !important;

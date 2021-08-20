@@ -182,6 +182,10 @@ a {
 .models_slide .el-carousel__container {
   height: 400px !important;
 }
+.school_slide .el-carousel__container {
+ height: 500px !important;
+}
+
 .i_icon {
   color: #2C89DF;
   font-size: 18px;

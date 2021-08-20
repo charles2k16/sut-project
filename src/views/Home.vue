@@ -45,9 +45,9 @@
       </div>
 
       <div class="mt-30">
-        <el-row :gutter="50" class="row-reverse">
+        <el-row :gutter="50">
           <el-col :xs="24" :sm="24" :md="7" :lg="7" :xl="7">
-            <div>
+            <div class="hidden-sm-and-down">
               <div class="active_schl_head">
                 <h1>Active Schools</h1>
               </div>
@@ -58,6 +58,20 @@
 
           <el-col :xs="24" :sm="24" :md="17" :lg="17" :xl="17">
             <HomeProjectDetails />
+          </el-col>
+        </el-row>
+      </div>
+
+      <div class="mt-30 hidden-md-and-up">
+        <el-row :gutter="50">
+          <el-col :xs="24" :sm="24" :md="7" :lg="7" :xl="7">
+            <div>
+              <div class="active_schl_head">
+                <h1>Active Schools</h1>
+              </div>
+
+              <schools-list />
+            </div>
           </el-col>
         </el-row>
       </div>
