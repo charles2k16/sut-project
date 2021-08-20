@@ -29,7 +29,7 @@
           /></a>
         </div>
 
-        <div>
+        <div class="hide-sm">
           <a href="https://moe.gov.gh/" target="_blank"
             ><img
               src="../assets/images/logos/moe.webp"
@@ -38,7 +38,7 @@
           /></a>
         </div>
 
-        <div>
+        <div class="hide-sm">
           <a href="https://energymin.gov.gh/" target="_blank"
             ><img
               src="../assets/images/logos/energy.webp"
@@ -46,7 +46,7 @@
               alt="eog"
           /></a>
         </div>
-        <div>
+        <div class="hide-sm">
           <a href="https://ges.gov.gh/" target="_blank"
             ><img
               src="../assets/images/logos/ges_logo.webp"
@@ -150,28 +150,6 @@ export default {
 
   img {
     margin-right: 20px;
-  }
-  img.header_image_ret {
-    height: 90px;
-  }
-  img.header_image_rel {
-    width: 100%;
-    height: auto;
-  }
-  img.header_image_val {
-    width: 100%;
-    height: auto;
-  }
-  img.header_image_moe {
-    width: 100%;
-    height: auto;
-  }
-  img.header_image_ern {
-    width: 100%;
-    height: auto;
-  }
-  img.header_image_ges {
-    height: 150px;
   }
 }
 .donate_btn {

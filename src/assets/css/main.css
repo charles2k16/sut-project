@@ -239,3 +239,30 @@ footer {
    margin-top: 16px;
    height: 16px;
 }
+  img.header_image_ret {
+    height: 90px;
+  }
+
+  img.header_image_rel {
+    width: 100%;
+    height: auto;
+  }
+
+  img.header_image_val {
+    width: 100%;
+    height: auto;
+  }
+
+  img.header_image_moe {
+    width: 100%;
+    height: auto;
+  }
+
+  img.header_image_ern {
+    width: 100%;
+    height: auto;
+  }
+
+  img.header_image_ges {
+    height: 150px;
+  }

@@ -45,9 +45,9 @@
       </div>
 
       <div class="mt-30">
-        <el-row :gutter="50">
+        <el-row :gutter="50" class="row-reverse">
           <el-col :xs="24" :sm="24" :md="7" :lg="7" :xl="7">
-            <div class="hidden-sm-and-down">
+            <div>
               <div class="active_schl_head">
                 <h1>Active Schools</h1>
               </div>
