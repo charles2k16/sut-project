@@ -17,6 +17,7 @@
             type="primary"
             size="small"
             class="animate__animated animate__backInLeft mt-15"
+            @click="$router.push('/about')"
             >Read more</el-button
           >
         </div>

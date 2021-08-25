@@ -177,7 +177,7 @@ a {
    object-fit: contain;
 }
 .home_slide .el-carousel__container {
-  height: 500px !important;
+  height: 550px !important;
 }
 .models_slide .el-carousel__container {
   height: 400px !important;

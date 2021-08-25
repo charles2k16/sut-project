@@ -4,7 +4,7 @@
 
     <el-carousel trigger="click" class="home_slide">
       <el-carousel-item>
-        <div class="home_carousel_bg">
+        <div class="home_carousel_bg bg_url">
           <div class="div_opacity">
             <h3 class="animate__animated animate__fadeInDown slide_h">
               Valco Trust Fund To Build All Schools Under Trees
@@ -19,18 +19,70 @@
               type="primary"
               size="small"
               class="animate__animated animate__backInRight"
-              >Read more</el-button
+            >
+              <a
+                href="https://realestatetimesafrica.com/news/education/737/Valco+Trust+Fund+To+Build+All+Schools+Under+Trees++.html"
+                target="_blank"
+                >Read more</a
+              ></el-button
             >
           </div>
         </div>
       </el-carousel-item>
 
       <el-carousel-item>
-        <img
-          style="width: 100%"
-          src="../assets/images/slider/web_donate.webp"
-          alt="First slide"
-        />
+        <div class="home_carousel_bg bg_url2">
+          <div class="div_opacity">
+            <h3 class="animate__animated animate__fadeInDown slide_h">
+              GHC3.5 Billion needed to construct all schools under trees
+            </h3>
+            <br />
+            <p class="animate__animated animate__slideInRight slide_p">
+              An amount of Ghc3.5 billion is needed to construct 5,403 schools
+              under tress across the country by the end of 2025 Valco Trust Fund
+              has..
+            </p>
+            <br />
+            <el-button
+              type="primary"
+              size="small"
+              class="animate__animated animate__backInRight"
+            >
+              <a
+                href="https://realestatetimesafrica.com/news/education/755/ghc3.5+billion+needed+to+construct+all+schools+under+trees+-valco+trust+fund.html"
+                target="_blank"
+                >Read more</a
+              ></el-button
+            >
+          </div>
+        </div>
+      </el-carousel-item>
+
+      <el-carousel-item>
+        <div class="home_carousel_bg bg_url3">
+          <div class="div_opacity">
+            <h3 class="animate__animated animate__fadeInDown slide_h">
+              Zero Schools Under Trees: Construction Begins...
+            </h3>
+            <br />
+            <p class="animate__animated animate__slideInRight slide_p">
+              Construction has begun at the various construction sites for the
+              first phase of the schools under trees project across the country.
+            </p>
+            <br />
+            <el-button
+              type="primary"
+              size="small"
+              class="animate__animated animate__backInRight"
+            >
+              <a
+                href="https://realestatetimesafrica.com/news/education/808/Zero+Schools+Under+Trees+Construction+Begins"
+                target="_blank"
+                >Read more</a
+              ></el-button
+            >
+          </div>
+        </div>
       </el-carousel-item>
     </el-carousel>
     <br />
@@ -120,9 +172,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.home_carousel_bg {
-  height: 500px;
+.bg_url {
   background-image: url('../assets/images/slider/BGB_carousel.webp');
+}
+.bg_url2 {
+  background-image: url('../assets/images/slider/10072.jpg');
+}
+.bg_url3 {
+  background-image: url('../assets/images/slider/1083.jpg');
+}
+.home_carousel_bg {
+  height: 550px;
   background-size: cover;
   position: relative;
   padding: 60px 0px 0px 60px;
