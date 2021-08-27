@@ -21,12 +21,12 @@
         </div>
 
         <div>
-          <a href="/about-valco" target="_blank"
-            ><img
-              src="../assets/images/logos/valco.webp"
-              class="header_image_val mt--15"
-              alt="VALCO LOGO"
-          /></a>
+          <img
+            src="../assets/images/logos/valco.webp"
+            class="header_image_val mt--15"
+            alt="VALCO LOGO"
+            @click="$router.push('/partner')"
+          />
         </div>
 
         <div class="hide-sm">
@@ -49,7 +49,7 @@
         <div class="hide-sm">
           <a href="https://ges.gov.gh/" target="_blank"
             ><img
-              src="../assets/images/logos/ges_logo.webp"
+              src="../assets/images/logos/ges_logo.webp.png"
               class="header_image_ges mt--15"
               alt="ges"
           /></a>
@@ -116,13 +116,31 @@
         </el-dropdown>
 
         <div class="w-20">
-          <el-input
-            placeholder="Type something"
-            prefix-icon="el-icon-search"
+          <el-select
             v-model="searchInput"
+            filterable
+            remote
+            reserve-keyword
+            placeholder="Search by school name"
+            :remote-method="searchMethod"
+            :loading="loading"
             class="header_search_input"
           >
-          </el-input>
+            <el-option
+              v-for="school in options"
+              :key="school.id"
+              :label="school.name"
+              :value="school.district.region.name"
+              @click="setLocalStorage(school)"
+            >
+              <span style="float: left" @click="setLocalStorage(school)">{{
+                school.name
+              }}</span>
+              <span style="float: right; color: #8492a6; font-size: 13px">{{
+                school.district.region.name
+              }}</span>
+            </el-option>
+          </el-select>
         </div>
       </div>
     </div>
@@ -130,12 +148,47 @@
 </template>
 
 <script>
+import schoolsApi from '@/api/schools';
+
 export default {
   name: 'MainHeader',
   data() {
     return {
-      searchInput: '',
+      searchInput: [],
+      loading: false,
+      schoolRegions: [],
+      options: [],
     };
+  },
+  created() {
+    this.getSchools();
+  },
+  methods: {
+    getSchools() {
+      schoolsApi
+        .getSchoolsList()
+        .then(response => {
+          this.schoolRegions = response;
+        })
+        .catch(error => console.log(error));
+    },
+    searchMethod(query) {
+      if (query !== '') {
+        this.loading = true;
+
+        this.options = this.schoolRegions.filter(item => {
+          return item.name.toLowerCase().indexOf(query.toLowerCase()) > -1;
+        });
+
+        this.loading = false;
+      } else {
+        this.options = [];
+      }
+    },
+    setLocalStorage(school) {
+      localStorage.setItem('selectedSchool', JSON.stringify(school));
+      this.$router.replace({ name: 'School', params: { name: school.name } });
+    },
   },
 };
 </script>

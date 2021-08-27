@@ -143,7 +143,7 @@
     <br /><br />
     <div class="page_wrap">
       <div>
-        <h2 class="head_txt color_primary">Project News & Insights</h2>
+        <h2 class="head_txt color_primary ml-5">Project News & Insights</h2>
         <BlogLists />
       </div>
     </div>

@@ -765,7 +765,7 @@
     margin-left: -20px;
   }
   img.header_image_ges {
-    height: 100px;
+      width: 75px;
     margin-left: -20px;
   }
   .donate_btn {
@@ -810,7 +810,7 @@
   }
 
   img.header_image_ges {
-    height: 125px;
+      width: 75px;
     margin-left: -20px;
   }
 
@@ -827,5 +827,18 @@
     right: 10.48% !important;
     top: 5.6% !important;
     padding: 6px 10px 0px 15px !important;
+  }
+  .slide_h {
+    font-size: 2rem !important;
+    line-height: 35px !important;
+  }
+
+  .slide_p {
+    font-size: 1.5rem !important;
+    line-height: 35px !important;
+    font-family: Avenir,
+      Helvetica,
+      Arial,
+      sans-serif !important;
   }
 }
