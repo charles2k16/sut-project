@@ -17,7 +17,7 @@
     <div class="page_wrap_others bg-grey mt-25">
       <div class="_details_head">
         <h2 class="head_txt animate__animated animate__fadeIn">
-          Send us your questions, suggestions and reports...
+          Send us your questions, suggestions and reports.
         </h2>
       </div>
       <div class="py-10 px-15">

@@ -5,7 +5,8 @@ import School from "@/views/School.vue";
 import About from "@/views/About.vue";
 import Partner from "@/views/Partner.vue";
 import Contact from "@/views/Contact.vue";
-import SingleBlog from "@/views/SingleBlog"
+import SingleBlog from "@/views/SingleBlog";
+import ImagesPortal from "@/views/ImagesPortal";
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,11 @@ const routes = [
     path: "/blog/:title",
     name: "Blog",
     component: SingleBlog,
+  },
+  {
+    path: "/images-portal",
+    name: "ImagesPortal",
+    component: ImagesPortal,
   },
 ];
 

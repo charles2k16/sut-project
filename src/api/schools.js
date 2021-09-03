@@ -22,5 +22,17 @@ export default {
     return axios.post(url, emailForm)
       .then((response) => Promise.resolve(response))
       .catch((error) => Promise.reject(error))
+  },
+  uploadImages (fileData) {
+    let url = "https://schools-under-trees-op4he.ondigitalocean.app/upload-images/"
+    return axios.post(url, fileData)
+      .then((response) => Promise.resolve(response))
+      .catch((error) => Promise.reject(error))
+  },
+  addSchoolImages (images) {
+    let url = "https://schools-under-trees-op4he.ondigitalocean.app/add-images/"
+    return axios.post(url, images)
+      .then((response) => Promise.resolve(response))
+      .catch((error) => Promise.reject(error))
   }
 }

@@ -280,6 +280,12 @@ img.header_image_ges {
   height: auto;
   margin-left:12px;
 }
-  .w-20 {
-    width: 30%;
-  }
+.w-20 {
+  width: 30%;
+}
+.portal_div {
+  width: 500px;
+}
+.float-right {
+  float: right;
+}
