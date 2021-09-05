@@ -26,7 +26,7 @@
             <label>Region</label> <br />
             <el-select
               v-model="addDistrictForm.region_id"
-              placeholder="Select school"
+              placeholder="Select region"
               class="full_width d-block mt-15"
             >
               <el-option
@@ -47,7 +47,7 @@
               v-model="addDistrictForm.name"
               class="d-block mt-15"
               type="text"
-              placeholder="name of school"
+              placeholder="name of district"
             ></el-input>
           </div>
           <br />

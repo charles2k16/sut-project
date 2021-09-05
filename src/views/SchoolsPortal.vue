@@ -26,7 +26,7 @@
             <label>Region</label> <br />
             <el-select
               v-model="selectedRegion"
-              placeholder="Select school"
+              placeholder="Select region"
               class="full_width d-block mt-15"
             >
               <el-option
@@ -43,7 +43,7 @@
             <label>District</label>
             <el-select
               v-model="addSchoolForm.district_id"
-              placeholder="Select school"
+              placeholder="Select district"
               class="full_width d-block mt-15"
             >
               <el-option
