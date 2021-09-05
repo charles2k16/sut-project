@@ -9,77 +9,91 @@
           animate__animated animate__fadeInDown
         "
       >
-        Images Portal
+        Schools Portal
       </h1>
     </div>
 
     <div class="page_wrap_others bg-grey mt-25">
       <div class="_details_head">
         <h2 class="head_txt animate__animated animate__fadeIn">
-          Add a new image here.
+          Add a new school here.
         </h2>
       </div>
 
       <div class="py-10 px-15 d-flex-algn-center">
         <div class="portal_div">
           <div>
-            <label>Name of School</label> <br />
+            <label>Region</label> <br />
             <el-select
-              v-model="school_id"
+              v-model="selectedRegion"
               placeholder="Select school"
               class="full_width d-block mt-15"
             >
               <el-option
-                v-for="school in schools"
-                :key="school.id"
-                :label="school.name"
-                :value="school.id"
+                v-for="region in regions"
+                :key="region.id"
+                :label="region.name"
+                :value="region.district"
               >
               </el-option>
             </el-select>
           </div>
           <br />
           <div class="mt-15">
-            <label>Add before image(s)</label>
-            <input
-              class="d-block mt-15"
-              name="files"
-              type="file"
-              accept=".webp"
-              multiple
-              @change="uploadImage($event, 'before')"
-            />
+            <label>District</label>
+            <el-select
+              v-model="addSchoolForm.district_id"
+              placeholder="Select school"
+              class="full_width d-block mt-15"
+            >
+              <el-option
+                v-for="district in selectedRegion"
+                :key="district.id"
+                :label="district.name"
+                :value="district.id"
+              >
+              </el-option>
+            </el-select>
           </div>
           <br />
           <hr />
           <div class="mt-15">
-            <label>Add during image(s)</label>
-            <input
+            <label>Name of school</label>
+            <el-input
+              v-model="addSchoolForm.name"
               class="d-block mt-15"
-              name="files"
-              type="file"
-              accept=".webp"
-              multiple
-              @change="uploadImage($event, 'during')"
-            />
+              type="text"
+              placeholder="name of school"
+            ></el-input>
           </div>
           <br />
           <hr />
           <div class="mt-15">
-            <label>Add After image(s)</label>
+            <label>Embeded Google Map location</label>
+            <el-input
+              v-model="addSchoolForm.location"
+              class="d-block mt-15"
+              type="text"
+              placeholder="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.42"
+            ></el-input>
+          </div>
+          <br />
+          <hr />
+          <div class="mt-15">
+            <label>Add before images</label>
             <input
               class="d-block mt-15"
               name="files"
               type="file"
               accept=".webp"
               multiple
-              @change="uploadImage($event, 'after')"
+              @change="uploadImage($event)"
             />
           </div>
 
           <div class="mt-25 float-right">
-            <el-button type="primary" @click.prevent="addSchoolImages"
-              >Add Image(s)</el-button
+            <el-button :loading="btnLoading" type="primary" @click="addSchool"
+              >Add School</el-button
             >
           </div>
         </div>
@@ -92,28 +106,33 @@
 import schoolsApi from '@/api/schools';
 
 export default {
-  name: 'ImagesPortal',
+  name: 'SchoolsPortal',
   data() {
     return {
-      school_id: null,
-      school_images: [],
-      schools: [],
+      regions: [],
+      btnLoading: false,
+      selectedRegion: [],
+      addSchoolForm: {
+        name: '',
+        district_id: null,
+        location: '',
+        school_images: [],
+      },
     };
   },
   created() {
-    this.getSchools();
+    this.getRegions();
   },
   methods: {
-    getSchools() {
+    getRegions() {
       schoolsApi
-        .getSchoolsList()
+        .getSchoolRegions()
         .then(response => {
-          this.schools = response;
+          this.regions = response;
         })
         .catch(error => console.log(error));
     },
-    uploadImage(e, type) {
-      console.log(e.target.files);
+    uploadImage(e) {
       let images = e.target.files;
       let formData = new FormData();
       for (let image of images) {
@@ -127,34 +146,25 @@ export default {
           for (let image_url of data) {
             let url_payload = {
               image_url: image_url,
-              category:
-                type == 'before'
-                  ? 'before'
-                  : type == 'after'
-                  ? 'after'
-                  : 'during',
+              category: 'before',
             };
-            this.school_images.push(url_payload);
+            this.addSchoolForm.school_images.push(url_payload);
           }
-          console.log(this.school_images);
         })
         .catch(error => {
           console.log(error);
         });
     },
-    addSchoolImages() {
-      let school_image_payload = {
-        school_id: this.school_id,
-        image_urls: this.school_images,
-      };
-      schoolsApi.addSchoolImages(school_image_payload).then(result => {
-        console.log(result.data);
+    addSchool() {
+      this.btnLoading = true;
+      schoolsApi.addSchool(this.addSchoolForm).then(result => {
+        console.log(result);
         this.$notify({
           title: 'Success',
-          message: 'Images uploaded successfully',
+          message: 'School added successfully',
           type: 'success',
         });
-        // window.location.reload();
+        this.btnLoading = false;
       });
     },
   },
